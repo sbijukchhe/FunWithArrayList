@@ -20,7 +20,7 @@ public class ArrayListDemoMovies {
 
         String newMovie = "";
         String answer = "y";
-      Movie randMovie;
+        Movie randMovie;
         ArrayList<Movie> movieList = new ArrayList<>();
 
         Scanner input = new Scanner(System.in);
@@ -55,17 +55,19 @@ public class ArrayListDemoMovies {
             }
             Collections.sort(movieList);
             System.out.println("\n\nList of all the movies after sorting - ");
+            System.out.println("------------------------------------------------");
             for (Movie myMovie : movieList) {
-                System.out.print("Name: ");
+                System.out.print("\nName: ");
                 System.out.print(myMovie.getName());
                 System.out.print(" / ");
                 System.out.print("Actor: ");
                 System.out.print(myMovie.getActor());
                 System.out.println();
-                randMovie = movieList.get((int)(Math.random() * movieList.size()));
-                System.out.println("Suggested movie -"+ randMovie.name);
+
 
             }
+            randMovie = movieList.get((int)(Math.random() * movieList.size()));
+            System.out.println("\n********** This movie is nice one. Do you want to watch??? - "+ randMovie.name+" ***********");
                 System.out.println("------------------------------------------------------------------------------------");
 
 
@@ -129,5 +131,4 @@ public class ArrayListDemoMovies {
             }
             return 0;
         }
-
 }
